@@ -1,3 +1,3 @@
-import { pow2, offsetShape } from '../utils/index.ts'
+import { ku_expand } from './utils/expand/index.ts'
 
-export {pow2,offsetShape}
+export { ku_expand }
