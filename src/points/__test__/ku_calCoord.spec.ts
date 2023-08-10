@@ -3,7 +3,7 @@ describe('ku_calCoord', () => {
   it('偶数个点', () => {
     const points = [10, 20, 30, 40]
     const coord = ku_calCoord(points)
-    const expectRs = [ { x: 10, y: 20 }, { x: 30, y: 40 } ]    
+    const expectRs = [ { X: 10, Y: 20 }, { X: 30, Y: 40 } ]    
     expect(coord).toEqual(expectRs)
   })
   

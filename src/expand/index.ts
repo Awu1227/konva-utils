@@ -1,7 +1,7 @@
 import ClipperLib from "clipper-lib";
 import { ku_calCoord } from '../points/index.ts';
 
-import { TPoint, TKonva_ps } from '../../type.ts';
+import { TPoint, TKonva_ps} from '../type.ts';
 
 
 
@@ -14,17 +14,12 @@ import { TPoint, TKonva_ps } from '../../type.ts';
 export function ku_expand(k_points: TKonva_ps, delta: number = 10) {
 
    const points = ku_calCoord(k_points);
-    const clipperPoints = points.map(item => {
-        const obj = { X: 0, Y: 0 };
-        obj.X = item.x;
-        obj.Y = item.y;
-        return obj;
-    });
+
     const clipperOffset = new ClipperLib.ClipperOffset();
     const paths: TPoint[][] = new ClipperLib.Paths();
-    clipperOffset.AddPaths([clipperPoints], ClipperLib.JoinType.jtMiter, ClipperLib.EndType.etClosedPolygon);
+    clipperOffset.AddPaths([points], ClipperLib.JoinType.jtMiter, ClipperLib.EndType.etClosedPolygon);
     clipperOffset.Execute(paths, delta);
-
+    
     const ps = paths[0].reduce((prev, next) => {
         return prev.concat([next.X, next.Y]);
     }, [] as number[]);

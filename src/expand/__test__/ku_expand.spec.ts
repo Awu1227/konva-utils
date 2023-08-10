@@ -1,4 +1,4 @@
-import { ku_expand } from '../index';
+import { ku_expand } from '../index.ts';
 describe('ku_expand', () => { 
   it('外扩', () => {
     const points = [50, 50, 100, 50, 100, 100, 50, 100]    
@@ -10,6 +10,7 @@ describe('ku_expand', () => {
         110, 40,
         110, 110
     ]
+    
     expect(expandPs).toEqual(expectRs)
   })
   it('内扩', () => {
