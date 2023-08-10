@@ -4,7 +4,7 @@ export default {
   input: './src/index.ts', // 入口文件
   output: [
     {
-      file: './es/index.js',
+      file: './lib/index.js',
       format: 'esm',  // 将软件包保存为 ES 模块文件
       name: 'cssModuleVue'
     },
