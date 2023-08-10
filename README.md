@@ -1,2 +1,7 @@
-# konva-offset
-一个针对Konva图形进行offset操作的工具库，基于clipper-lib实现。
+# konva-utils
+一个针对[Konva](https://konvajs.org/)的工具库。
+
+## 目前支持的功能
+
+- [ku_expand](https://github.com/Awu1227/konva-utils/blob/b_1.2/src/utils/expand/index.ts#L14)：对多边形的点进行内扩和外扩
+
