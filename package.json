@@ -3,8 +3,8 @@
   "version": "1.2.1",
   "description": "utils for konva",
   "type": "module",
-  "main": "es/index.js",
-  "module": "es/index.js",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
   "files": [
     "es/*"
   ],
