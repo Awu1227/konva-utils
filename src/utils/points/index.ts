@@ -5,7 +5,10 @@
  * @param {number[]} points
  * @returns {{}}
  */
-export function calCoord(points: number[]) {
+export function ku_calCoord(points: number[]) {
+    if (points.length % 2 !== 0) {
+        return []
+    }
     let coordArr = [];
     for (let index = 0; index < points.length; index += 2) {
         let point = {
