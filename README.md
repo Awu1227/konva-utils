@@ -11,5 +11,7 @@
 
 - [ku_lineIntersects](https://github.com/Awu1227/konva-utils/blob/b_1.3/src/intersects/index.ts#L15)：判断多边形是否相交，当两个图形是包含关系时，判定不相交。
 
-- [ku_polygonIsContain](https://github.com/Awu1227/konva-utils/blob/b_1.3/src/intersects/index.ts#L47)：判断多边形是否包含
+- [ku_bothPolygonIsContain](https://github.com/Awu1227/konva-utils/blob/b_1.3/src/intersects/index.ts#L47)：判断多边形是否相互包含
+- 
+- [ku_polygonIsContain](https://github.com/Awu1227/konva-utils/blob/b_1.3/src/intersects/index.ts#L47)：判断多边形1是否包含多边形2
 

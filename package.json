@@ -1,6 +1,6 @@
 {
   "name": "konva-utils",
-  "version": "1.3.6",
+  "version": "1.3.7",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Awu1227/konva-utils"
@@ -27,8 +27,10 @@
   "author": "Awu1227",
   "license": "MIT",
   "dependencies": {
+    "@types/three": "^0.157.2",
     "clipper-lib": "^6.4.2",
-    "konva": "^9.2.0"
+    "konva": "^9.2.0",
+    "three": "^0.157.0"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.22.10",

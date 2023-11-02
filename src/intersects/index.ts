@@ -1,4 +1,4 @@
-import ClipperLib from "clipper-lib";
+import  ClipperLib from "clipper-lib";
 import { TKonva_ps, TPoint } from "../type.ts";
 import { ps2Line } from "../utils/ps2Line.ts";
 
@@ -38,13 +38,13 @@ export function ku_lineIntersects(k_ps1: TKonva_ps, k_ps2: TKonva_ps) {
 
 
   if (solution.length) {    
-    return !polygonIsContain(c_line1,c_line2)
+    return !bothePolygonIsContain(c_line1,c_line2)
     } else {
     return false
   }
 }
-
-export function polygonIsContain(polygon1: TPoint[], polygon2: TPoint[]) {
+/**@description polygon1与polygon2是否相互包含 */
+export function bothePolygonIsContain(polygon1: TPoint[], polygon2: TPoint[]) {
       let isContain1 = true; 
       let isContain2 = true; 
   for(let point of polygon1){
@@ -63,4 +63,19 @@ export function polygonIsContain(polygon1: TPoint[], polygon2: TPoint[]) {
       }
   }
   return isContain1 || isContain2
+}
+
+/**@description polygon1是否包含polygon2 */
+export function polygonIsContain(polygon1: TPoint[], polygon2: TPoint[]) {
+      let isContain2 = true; 
+
+    
+  for(let point of polygon2){
+  //PointInPolygon函数返回值： -1: 表示点在路径外部,0: 表示点在路径边界上,1: 表示点在路径内部
+      if(ClipperLib.Clipper.PointInPolygon(point, polygon1) !== 1){
+          isContain2 =false;
+          break;
+      }
+  }
+  return isContain2
 }
