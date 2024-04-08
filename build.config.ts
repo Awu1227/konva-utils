@@ -10,12 +10,6 @@ export default defineBuildConfig({
       minify: true,
     },
   },
-  alias: {
-  },
   failOnWarn: false,
-  hooks: {
-    "rollup:options"(ctx, options) {
-      options.plugins = [options.plugins];
-    },
-  },
+  declaration: true,
 });
